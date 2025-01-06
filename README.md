@@ -18,13 +18,15 @@ docker pull docker.io/docker-obsidian-livesync-couchdb:latest
 
 Run the container with CouchDB configured for Obsidian LiveSync:
 
+```
 docker run -d \
   -e SERVER_DOMAIN=example.com \
   -e COUCHDB_USER=username \
   -e COUCHDB_PASSWORD=password \
   -e COUCHDB_DATABASE=obsidian \
   -p 5984:5984 \
-  docker.io/docker-obsidian-livesync-couchdb:latest
+  docker.io/oleduc/docker-obsidian-livesync-couchdb:master
+```
 
 ## Testing Configuration
 
