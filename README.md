@@ -39,6 +39,6 @@ This repository is licensed under the MIT License. Contributions are welcome!
 
 ## Credits
 
-    [Obsidian LiveSync for the core synchronization functionality.](https://github.com/vrtmrz/obsidian-livesync)
-    [CouchDB for its awesome, distributed database solution.](https://couchdb.apache.org/)
-    [Obsidian for it's awesome note taking app.](https://obsidian.md/)
+[Obsidian LiveSync for the core synchronization functionality.](https://github.com/vrtmrz/obsidian-livesync)
+[CouchDB for its awesome, distributed database solution.](https://couchdb.apache.org/)
+[Obsidian for it's awesome note taking app.](https://obsidian.md/)
