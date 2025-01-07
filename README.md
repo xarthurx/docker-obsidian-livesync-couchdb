@@ -4,6 +4,8 @@ This repository provides a Docker container for configuring CouchDB specifically
 
 The container is built and published automatically via GitHub Actions.
 
+[Docker Hub Page](https://hub.docker.com/r/oleduc/docker-obsidian-livesync-couchdb)
+
 ## Features
 - **Automated CouchDB Configuration**: Extracts necessary settings for Obsidian LiveSync from the bash script created by the plugin maintainer.
 - **Build time configuration**: Configures couchDB at build time via configuration files instead of using couchDB APIs which simplifies the process.
