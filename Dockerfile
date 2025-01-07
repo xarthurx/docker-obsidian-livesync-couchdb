@@ -27,9 +27,8 @@ RUN curl -fsSL https://raw.githubusercontent.com/vrtmrz/obsidian-livesync/main/u
 RUN curl -fsSL https://raw.githubusercontent.com/vrtmrz/obsidian-livesync/main/utils/flyio/generate_setupuri.ts -o generate_setupuri.ts
 
 # Update the couchDB config from the couchdb-init script provided by the plugin maintainer
-RUN deno 
+RUN deno -A /scripts/couchdb-setup.ts
 
 ENV SERVER_DOMAIN=localhost
 ENV COUCHDB_USER=default
 ENV COUCHDB_DATABASE=default
-ENV COUCHDB_PASSWORD=default-12345
