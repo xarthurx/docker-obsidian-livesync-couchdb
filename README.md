@@ -1,6 +1,6 @@
 # CouchDB Configuration for Obsidian LiveSync
 
-This repository provides a Docker container for configuring CouchDB specifically for use with [Obsidian LiveSync](https://github.com/vrtmrz/obsidian-livesync). It automates the setup process by parsing a Bash script (`couchdb-init.sh`) and updating CouchDB's configuration file (`local.ini`).
+This repository provides a Docker container for configuring CouchDB specifically for use with [Obsidian LiveSync](https://github.com/vrtmrz/obsidian-livesync). It automates the setup process by parsing the bash script (`couchdb-init.sh`) provided by obsidian-livesync's maintainer and updating CouchDB's configuration file (`local.ini`) according to the settings the plugin needs.
 
 The container is built and published automatically via GitHub Actions.
 
