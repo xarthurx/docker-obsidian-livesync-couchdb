@@ -47,7 +47,7 @@ services:
     ports:
       - "${COUCHDB_PORT:-5984}:5984"
     volumes:
-      - /container-data/obsidian-livesync:/opt/couchdb/data
+      - ${COUCHDB_DATA}:/opt/couchdb/data
 ```
 
 ## Testing Configuration
