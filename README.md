@@ -1,3 +1,5 @@
+**This FORK supports ARM for Apple M-series chip.**
+
 # CouchDB Configuration for Obsidian LiveSync
 
 This repository provides a Docker container for configuring CouchDB specifically for use with [Obsidian LiveSync](https://github.com/vrtmrz/obsidian-livesync). It automates the setup process by parsing the bash script (`couchdb-init.sh`) provided by obsidian-livesync's maintainer and updating CouchDB's configuration file (`local.ini`) according to the settings the plugin needs.
@@ -36,7 +38,7 @@ version: "3.8"
 
 services:
   couchdb-obsidian-livesync:
-    image: docker.io/oleduc/docker-obsidian-livesync-couchdb:master
+    image: docker.io/xarthur/docker-obsidian-livesync-couchdb:master
     container_name: couchdb-obsidian-livesync
     restart: always
     environment:
