@@ -8,6 +8,7 @@ on:
 jobs:
   docker-arm64:
     runs-on: ubuntu-24.04-arm
+    environment: DockerHub
     steps:
       -
         name: Set up Docker Buildx
