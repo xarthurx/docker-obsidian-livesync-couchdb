@@ -1,4 +1,4 @@
-**This FORK supports ARM for Apple M-series chip.**
+**NOTICE: This FORK supports ARM for Apple M-series chip.**
 
 # CouchDB Configuration for Obsidian LiveSync
 
