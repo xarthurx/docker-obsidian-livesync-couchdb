@@ -1,4 +1,6 @@
-**NOTICE: This FORK supports ARM for Apple M-series chip.**
+# NOTICE
+- This FORK supports ARM for Apple M-series chip.
+- Original repo: [oleduc's repo](https://github.com/oleduc/docker-obsidian-livesync-couchdb)
 
 # CouchDB Configuration for Obsidian LiveSync
 
@@ -6,7 +8,7 @@ This repository provides a Docker container for configuring CouchDB specifically
 
 The container is built and published automatically via GitHub Actions.
 
-[Docker Hub Page](https://hub.docker.com/r/oleduc/docker-obsidian-livesync-couchdb)
+[Docker Hub Page](https://hub.docker.com/r/xarthur/obsidian-sync-couchdb)
 
 ## Features
 - **Automated CouchDB Configuration**: Extracts necessary settings for Obsidian LiveSync from the bash script created by the plugin maintainer.
@@ -16,12 +18,12 @@ The container is built and published automatically via GitHub Actions.
 ## Pulling the Docker Image
 To use the pre-built image, pull it from the container registry:
 ```bash
-docker pull docker.io/docker-obsidian-livesync-couchdb:latest
+docker pull docker.io/xarthur/docker-obsidian-livesync-couchdb:latest
 ```
+
 ## Running the Container
 
-Run the container with CouchDB configured for Obsidian LiveSync:
-
+### Command Line
 ```
 docker run -d \
   -e SERVER_DOMAIN=example.com \
@@ -29,27 +31,27 @@ docker run -d \
   -e COUCHDB_PASSWORD=password \
   -e COUCHDB_DATABASE=obsidian \
   -p 5984:5984 \
-  docker.io/oleduc/docker-obsidian-livesync-couchdb:master
+  docker.io/xarthur/docker-obsidian-livesync-couchdb:latest
 ```
 
-Or via docker-compose
+### docker-compose
 ```yaml
 version: "3.8"
 
 services:
   couchdb-obsidian-livesync:
-    image: docker.io/xarthur/docker-obsidian-livesync-couchdb:master
-    container_name: couchdb-obsidian-livesync
-    restart: always
+    container_name: couchdb-obsidian
+    image: docker.io/xarthur/obsidian-sync-couchdb:latest
     environment:
       SERVER_URL: ${SERVER_URL}
       COUCHDB_USER: ${COUCHDB_USER}
       COUCHDB_PASSWORD: ${COUCHDB_PASSWORD}
       COUCHDB_DATABASE: ${COUCHDB_DATABASE}
-    ports:
-      - "${COUCHDB_PORT:-5984}:5984"
     volumes:
       - ${COUCHDB_DATA}:/opt/couchdb/data
+    ports:
+      - "${COUCHDB_PORT:-5984}:5984"
+    restart: unless-stopped
 ```
 
 ## Testing Configuration
